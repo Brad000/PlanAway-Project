@@ -1,23 +1,57 @@
-.a {
-    background-color: red;
-    height: 50px;
-   
+@import url('https://fonts.googleapis.com/css?family=Gayathri:100,200,300,400,500,600,700');
+
+/*---Landing Page---*/
+
+.site-heading {
+    background-color: #eae7dc;
+    color: #e85a4f;
 }
 
-.b {
-    background-color: blue;
-     height: 50px;
+.site-name {
+    font-family: 'Gayathri', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
-.c {
-    background-color: green;
-     height: 50px;
+.site-logo {
+    margin-left: 10px;
 }
 
-.d {
-    background-color: orange;
-     height: 40px;
+.site-links {
+    margin-left: 70px;
+    font-size: 40px;
+    margin-top: 10px;
 }
+
+.link-text {
+    font-family: 'Gayathri', sans-serif;
+    font-weight: 600;
+}
+
+#a-links {
+    text-decoration: none;
+    cursor: pointer;
+    color: #e98074;
+    transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
+}
+
+#a-links:hover {
+    color: #e85a4f;
+}
+
+.site-brief {
+    font-family: 'Gayathri', sans-serif;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+
 
 .image {
     background-color: gray;
