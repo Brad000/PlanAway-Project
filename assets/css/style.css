@@ -1,0 +1,37 @@
+.a {
+    background-color: red;
+    height: 50px;
+   
+}
+
+.b {
+    background-color: blue;
+     height: 50px;
+}
+
+.c {
+    background-color: green;
+     height: 50px;
+}
+
+.d {
+    background-color: orange;
+     height: 40px;
+}
+
+.image {
+    background-color: gray;
+}
+
+#image {
+    padding: 0;
+}
+
+.footer {
+    height: 100px;
+    background-color: purple;
+}
+
+img {
+    height: 90vh;
+}
