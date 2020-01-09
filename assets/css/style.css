@@ -11,6 +11,7 @@
     font-family: 'Gayathri', sans-serif;
     margin-top: 10px;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .site-logo {
@@ -18,12 +19,13 @@
 }
 
 .site-links {
-    margin-left: 70px;
+    text-align: center;
     font-size: 40px;
     margin-top: 10px;
 }
 
 .link-text {
+    text-align: center;
     font-family: 'Gayathri', sans-serif;
     font-weight: 600;
 }
@@ -45,27 +47,60 @@
 .site-brief {
     font-family: 'Gayathri', sans-serif;
     text-align: center;
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 700;
     padding: 0;
     margin: 0;
-}
-
-
-
-.image {
-    background-color: gray;
 }
 
 #image {
     padding: 0;
 }
 
+.main-images {
+    opacity: 0.78;
+}
+
+#indicators {
+    background-color: #0d1417;
+    color: #0d1417;
+}
+
+
+
+
+
+
+
+/*---Footer---*/
+
 .footer {
-    height: 100px;
-    background-color: purple;
+    height: 75px;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Gayathri', sans-serif;
+    padding-top: 15px;
+    background-color: #eae7dc;
+    color: #e85a4f;
+}
+
+.fa-google {
+    margin-left: 5px;
 }
 
 img {
     height: 90vh;
+}
+
+
+
+/*---Media Queries---*/
+
+@media(min-width: 767px){
+    .site-name {
+        text-align: left;
+    }
+    .site-brief {
+        font-size: 18px;
+    }
 }
