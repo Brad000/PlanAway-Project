@@ -22,6 +22,7 @@
     text-align: center;
     font-size: 40px;
     margin-top: 10px;
+    margin-right: 10px;
 }
 
 .link-text {
@@ -61,15 +62,32 @@
     opacity: 0.78;
 }
 
-#indicators {
-    background-color: #0d1417;
-    color: #0d1417;
+img {
+    height: 80vh;
 }
 
 
+/*---home.html---*/
 
+.briefs {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px;
+    margin: 0;
+    color: #e85a4f;
+}
 
+.n {
+    background-color: lightblue;
+    height: 80vh;
+}
 
+.m {
+    background-color: lightpink;
+    height: 80vh;
+}
 
 
 /*---Footer---*/
@@ -88,12 +106,6 @@
     margin-left: 5px;
 }
 
-img {
-    height: 90vh;
-}
-
-
-
 /*---Media Queries---*/
 
 @media(min-width: 767px){
@@ -104,3 +116,5 @@ img {
         font-size: 18px;
     }
 }
+
+/*---JS css--*/
