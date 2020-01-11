@@ -112,14 +112,14 @@ img {
     margin-bottom: 40px;
 }
 
-.n {
-    background-color: lightblue;
-    height: 80vh;
+.form-style {
+    background-color: #eae7dc;
+    height: auto;
 }
 
 .m {
-    background-color: lightpink;
-    height: 80vh;
+    background-color: #eae7dc;
+    height: auto;
 }
 
 
@@ -130,7 +130,7 @@ img {
     text-align: center;
     font-weight: 700;
     font-family: 'Gayathri', sans-serif;
-    padding-top: 15px;
+    padding-top: 20px;
     background-color: #eae7dc;
     color: #e85a4f;
 }
