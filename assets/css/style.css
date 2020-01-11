@@ -63,11 +63,11 @@
 }
 
 img {
-    height: 80vh;
+    height: 85vh;
 }
 
 
-/*---home.html---*/
+/*---planner.html---*/
 
 .briefs {
     font-family: 'Gayathri', sans-serif;
@@ -77,6 +77,39 @@ img {
     padding: 10px;
     margin: 0;
     color: #e85a4f;
+}
+
+#infoButton {
+    display: inline-block;
+    margin-bottom: 5px;
+    background-color: #e85a4f;
+    color: #eae7dc;
+    border: none;
+    box-shadow: none;
+    transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+}
+
+#infoButton:hover {
+    background-color: #fd9b90;
+}
+
+.button-align {
+    text-align: center;
+}
+
+#info-card {
+    border: none;
+    background-color: #eae7dc;
+}
+
+.plan-form {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .n {
@@ -108,13 +141,22 @@ img {
 
 /*---Media Queries---*/
 
-@media(min-width: 767px){
+@media(min-width: 767px) {
     .site-name {
         text-align: left;
     }
     .site-brief {
         font-size: 18px;
     }
+    #infoButton {
+        margin: 10px;
+    }
 }
 
+
+
 /*---JS css--*/
+
+.green {
+    background-color: green;
+}
