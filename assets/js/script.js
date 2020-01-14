@@ -1,25 +1,37 @@
  var map, places, infoWindow;
  var markers = [];
  var autocomplete;
- var countryRestrict = { 'country': 'us' };
+ var countryRestrict = { 'country': 'all' };
  var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
  var hostnameRegexp = new RegExp('^https?://.+?/');
 
  var countries = {
-  'au': {
-   center: { lat: -25.3, lng: 133.8 },
-   zoom: 4
-  },
-  'br': {
-   center: { lat: -14.2, lng: -51.9 },
-   zoom: 3
-  },
-  'ca': {
-   center: { lat: 62, lng: -110.0 },
-   zoom: 3
+  'all':{
+   center:{lat: 15, lng: 0},
+   zoom: 2
   },
   'fr': {
    center: { lat: 46.2, lng: 2.2 },
+   zoom: 5
+  },
+  'us': {
+   center: { lat: 37.1, lng: -95.7 },
+   zoom: 3
+  },
+  'es': {
+   center: { lat: 40.5, lng: -3.7 },
+   zoom: 5
+  },
+  'cn': {
+   center: { lat: 35.8, lng: 104.1 },
+   zoom: 4
+  },
+  'it': {
+   center: { lat: 41.9, lng: 12.6 },
+   zoom: 5
+  },
+  'uk': {
+   center: { lat: 54.8, lng: -4.6 },
    zoom: 5
   },
   'de': {
@@ -30,40 +42,32 @@
    center: { lat: 23.6, lng: -102.5 },
    zoom: 4
   },
-  'nz': {
-   center: { lat: -40.9, lng: 174.9 },
-   zoom: 5
-  },
-  'it': {
-   center: { lat: 41.9, lng: 12.6 },
-   zoom: 5
-  },
-  'za': {
-   center: { lat: -30.6, lng: 22.9 },
-   zoom: 5
-  },
-  'es': {
-   center: { lat: 40.5, lng: -3.7 },
-   zoom: 5
-  },
-  'pt': {
-   center: { lat: 39.4, lng: -8.2 },
+  'th': {
+   center: { lat: 15.8, lng: 100.9 },
    zoom: 6
   },
-  'us': {
-   center: { lat: 37.1, lng: -95.7 },
+  'tr': {
+   center: { lat: 38.9, lng: 35.2 },
+   zoom: 5
+  },
+  'at': {
+   center: { lat: 47.5, lng: 14.5 },
+   zoom: 7
+  },
+  'my': {
+   center: { lat: 4.2, lng: 101.9 },
+   zoom: 6
+  },
+  'ca': {
+   center: { lat: 62, lng: -110.0 },
    zoom: 3
   },
-  'uk': {
-   center: { lat: 54.8, lng: -4.6 },
-   zoom: 5
-  }
  };
 
  function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-   zoom: countries['us'].zoom,
-   center: countries['us'].center,
+   zoom: countries['all'].zoom,
+   center: countries['all'].center,
    mapTypeControl: false,
    panControl: false,
    zoomControl: false,
