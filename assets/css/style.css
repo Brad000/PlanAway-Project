@@ -84,7 +84,7 @@ img {
     margin-bottom: 5px;
     background-color: #e85a4f;
     color: #eae7dc;
-    border: none;
+    border: solid 1px grey;
     box-shadow: none;
     transition: background-color 0.5s ease-in-out;
     -moz-transition: background-color 0.5s ease-in-out;
@@ -105,11 +105,46 @@ img {
     background-color: #eae7dc;
 }
 
+#button {
+    background-color: #e85a4f;
+    color: #eae7dc;
+    width: 100%;
+    box-shadow: none;
+    border: solid 1px grey;
+    transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+}
+
+#button:hover {
+    background-color: #fd9b90;
+}
+
+#routeButton {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #e85a4f;
+    color: #eae7dc;
+    border: solid 1px grey;
+    box-shadow: none;
+    transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+}
+
+#routeButton:hover {
+    background-color: #fd9b90;
+}
+
 
 /*---Map---*/
 
 #map {
     min-height: 80vh;
+    margin-top: 10px;
 }
 
 .map-section {
@@ -141,8 +176,16 @@ img {
     padding: 6px 12px;
 }
 
+.filter-title {
+    margin-top: 10px;
+}
+
+#filterButtons {
+    margin: 20px 10px 20px 25px;
+}
+
 #findhotels {
-    margin-left: 10px;
+    margin: 5px 10px;
 }
 
 #listing {
@@ -150,26 +193,29 @@ img {
     width: 220px;
     height: 470px;
     overflow: auto;
-    left: 410px;
-    top: 0px;
+    right: 2px;
+    top: 10px;
     cursor: pointer;
     overflow-x: hidden;
+    display: none;
+
+
 }
 
 #locationField {
     -webkit-box-flex: 1 1 190px;
     -ms-flex: 1 1 190px;
     flex: 1 1 190px;
-    margin: 0 8px;
+    margin: 0 10px;
     margin-bottom: 5px;
-    
+
 }
 
 #controls {
     -webkit-box-flex: 1 1 140px;
     -ms-flex: 1 1 140px;
     flex: 1 1 140px;
-    
+
 }
 
 #autocomplete {
@@ -201,7 +247,7 @@ img {
 
 #rating {
     font-size: 13px;
-    font-family: Arial Unicode MS;
+    font-family: 'Gayathri', sans-serif Unicode MS;
 }
 
 .iw_table_row {
@@ -247,6 +293,11 @@ img {
     }
 }
 
+@media(min-width: 1023px) {
+    #listing {
+        display: block;
+    }
+}
 
 
 /*---JS css--*/

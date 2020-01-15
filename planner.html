@@ -49,40 +49,59 @@
 
                     <div class="hotel-search">
                         <div id="findhotels">
-                            Find hotels in:
+                            Start Planning Below:
                         </div>
 
                         <div id="controls">
                             <select id="country">
-          <option value="all" selected>Choose A Country</option>
-          <option value="fr">France</option>
-          <option value="us">U.S.A</option>
-          <option value="es">Spain</option>
-          <option value="cn">China</option>
-          <option value="it">Italy</option>
-          <option value="uk">United Kingdom</option>
-          <option value="de">Germany</option>
-          <option value="mx">Mexico</option>
-          <option value="th">Thailand</option>
-          <option value="tr">Turkey</option>
-          <option value="at">Austria</option>
-          <option value="my">Malaysia</option>
-          <option value="">Hong Kong</option>
-          <option value="">Greece</option>
-          <option value="">Russia</option>
-          <option value="">Japan</option>
-          <option value="ca">Canada</option>
-          <option value="">Saudi Arabia</option>
-          <option value="">Poland</option>
-          <option value="">South Korea</option>
-        </select>
+                                  <option value="all" selected>Choose A Country</option>
+                                  <option value="fr">France</option>
+                                  <option value="us">U.S.A</option>
+                                  <option value="es">Spain</option>
+                                  <option value="cn">China</option>
+                                  <option value="it">Italy</option>
+                                  <option value="uk">United Kingdom</option>
+                                  <option value="de">Germany</option>
+                                  <option value="mx">Mexico</option>
+                                  <option value="th">Thailand</option>
+                                  <option value="tr">Turkey</option>
+                                  <option value="at">Austria</option>
+                                  <option value="my">Malaysia</option>
+                                  <option value="gr">Greece</option>
+                                  <option value="ru">Russia</option>
+                                  <option value="jp">Japan</option>
+                                  <option value="ca">Canada</option>
+                                  <option value="sa">Saudi Arabia</option>
+                                  <option value="pl">Poland</option>
+                                  <option value="kr">South Korea</option>
+                                  <option value="nl">Netherlands</option>
+                            </select>
 
                             <div id="locationField">
                                 <input id="autocomplete" placeholder="Enter a city" type="text" />
                             </div>
                         </div>
                     </div>
-
+                    <div id="title"><h4 class="filter-title">Filter Results</h4></div>
+                    <div class="form-check" id="filterButtons">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hotelCheck" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Hotels</label>
+                    </div>
+                    <div class="form-check" id="filterButtons">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="attractionCheck" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Attractions</label>
+                    </div>
+                    <div class="form-check" id="filterButtons">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="restaurantCheck" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Restaurants</label>
+                    </div>
+                    <div class="form-check" id="filterButtons">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="nightlifeCheck" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Nightlife</label>
+                    </div>
+                    <div>
+                        <a type="button" class="btn" id="button">Clear Results</a>
+                    </div>
                     <div id="listing">
                         <table id="resultsTable">
                             <tbody id="results"></tbody>
@@ -116,8 +135,16 @@
 
                         </div>
                     </div>
-
-
+<div class="button-align">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl" id="routeButton">Route Guidence</button>
+</div>
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
 
 
 
