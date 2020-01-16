@@ -82,7 +82,9 @@
                             </div>
                         </div>
                     </div>
-                    <div id="title"><h4 class="filter-title">Filter Results</h4></div>
+                    <div id="title">
+                        <h4 class="filter-title">Filter Results</h4>
+                    </div>
                     <div class="form-check" id="filterButtons">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hotelCheck" value="option1">
                         <label class="form-check-label" for="inlineRadio1">Hotels</label>
@@ -135,34 +137,97 @@
 
                         </div>
                     </div>
-<div class="button-align">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl" id="routeButton">Route Guidence</button>
-</div>
-<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" role="document">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
+                    <div class="inline-buttons">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#countryInfo" aria-expanded="false" aria-controls="collapseExample" id="countryButton">Country Info
+                </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl" id="sponserButton">Sponser Sites</button>
+                    </div>
+                    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content" id="pop-up">
 
-
-
-
-
-
-
-
-
-
-
-
+                            </div>
+                        </div>
+                    </div>
+                    <!---No Selection Card--->
+                    <div class="collapse" id="countryInfo">
+                        <div class="all extra">
+                            <div class="card" id="infoCard">
+                                <div class="row no-gutters">
+                                    <div class="col-12">
+                                        <div class="card-body">
+                                            <h4> Please Select A Country From The List Above!</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---French Card--->
+                        <div class="fr extra">
+                            <div class="card" id="infoCard">
+                                <div class="row no-gutters">
+                                    <div class="col-12">
+                                        <div class="card-body">
+                                            <h4 class="card-title">France<img class="flag" src="assets/images/francef.png" alt="French Flag"></h4>
+                                            <ul>
+                                                <li>Capital: Paris</li>
+                                                <li>Population: 67,022,000 (2019)</li>
+                                                <li>Currency: Euro</li>
+                                            </ul>
+                                            <h5>Top 3 Cities</h5>
+                                            <ol>
+                                                <li>Paris</li>
+                                                <li>Bordeaux</li>
+                                                <li>Lyon</li>
+                                            </ol>
+                                            <h5>Top 3 Attractions</h5>
+                                            <ol>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/france/paris/attractions/musee-du-louvre/a/poi-sig/372123/359219" target="_Blank">Musée du Louvre</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/france/chartres/attractions/cathedrale-notre-dame/a/poi-sig/1079880/359219">Cathédrale Notre Dame</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/france/attractions/chateau-de-chenonceau/a/poi-sig/1196827/359219" target "_blank">Château de Chenonceau</a></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---USA Card--->
+                        <div class="us extra">
+                            <div class="card" id="infoCard">
+                                <div class="row no-gutters">
+                                    <div class="col-12">
+                                        <div class="card-body">
+                                            <h4 class="card-title">USA<img class="us-flag" src="assets/images/usaf.png" alt="American Flag"></h4>
+                                            <ul>
+                                                <li>Capital: Washington DC</li>
+                                                <li>Population: 328,239,523 (2019)</li>
+                                                <li>Currency: US Dollar</li>
+                                            </ul>
+                                            <h5>Top 3 Cities</h5>
+                                            <ol>
+                                                <li>New York City</li>
+                                                <li>Los Angeles</li>
+                                                <li>San Francisco</li>
+                                            </ol>
+                                            <h5>Top 3 Attractions</h5>
+                                            <ol>
+                                                <li><a class="card-link" href=https://www.lonelyplanet.com/usa/attractions/kennedy-space-center/a/poi-sig/1348335/361720 target="_Blank">Kennedy Space Center</a></li>
+                                                <li><a class="card-link" href=https://www.lonelyplanet.com/usa/tucson/attractions/saguaro-national-park/a/poi-sig/1108863/361720>Saguaro National Park</a></li>
+                                                <li><a class="card-link" href=https://www.lonelyplanet.com/usa/new-york-city/attractions/central-park/a/poi-sig/381791/361720 target "_blank">Central Park</a></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div id="map"></div>
             </div>
         </div>
+
     </section>
 
     <footer class="container-fluid">

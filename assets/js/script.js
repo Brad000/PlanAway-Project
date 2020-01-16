@@ -3,6 +3,19 @@ $(document).ready(function() {
  $("#button").click(function() {
   location.reload();
  });
+ 
+  $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".extra").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".extra").hide();
+            }
+        });
+    }).change();
+ 
 });
 
 
@@ -455,5 +468,9 @@ function buildIWContent(place) {
  else {
   document.getElementById('iw-website-row').style.display = 'none';
  }
-
 }
+
+
+
+
+
