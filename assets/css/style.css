@@ -129,7 +129,7 @@ img {
 
 #sponserButton {
     display: inline-block;
-    margin: 15px 15px 15px 15px;
+    margin: 20px 15px 20px 15px;
     background-color: #e85a4f;
     color: #eae7dc;
     border: solid 1px grey;
@@ -146,7 +146,7 @@ img {
 
 #countryButton {
     display: inline-block;
-    margin: 15px 15px 15px 15px;
+    margin: 20px 15px 20px 15px;
     background-color: #e85a4f;
     color: #eae7dc;
     border: solid 1px grey;
@@ -163,14 +163,40 @@ img {
 
 #pop-up {
     background-color: #e85a4f;
-    height: 100px;
+    height: auto;
     border: solid 3px #eae7dc;
+}
+
+.sponser-titles {
+    margin-top: 10px;
+    margin-left: 15px;
+    color: #eae7dc;
+    text-decoration: underline;
+}
+
+.sponser-text {
+    margin-top: 10px;
+    margin-left: 15px;
+    color: #eae7dc;
+}
+
+.sponser-links {
+    color: black;
+    font-weight: 700;
+    transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
+}
+
+.sponser-links:hover {
+    color: black;
 }
 
 /*---Map---*/
 
 #map {
-    min-height: 80vh;
+    min-height: 78vh;
     margin-top: 10px;
 }
 
@@ -208,7 +234,7 @@ img {
 }
 
 #filterButtons {
-    margin: 20px 10px 20px 25px;
+    margin: 10px 10px 10px 25px;
 }
 
 #findhotels {
@@ -309,10 +335,10 @@ img {
 #infoCard {
     font-family: 'Gayathri', sans-serif;
     font-weight: 600;
-    background-color:#e85a4f;
+    background-color: #e85a4f;
     color: #eae7dc;
     border: solid 2px grey;
-    
+
 }
 
 .card-link {
@@ -321,7 +347,7 @@ img {
 }
 
 .flag {
-    height:50px;
+    height: 50px;
     width: 70px;
 }
 
@@ -352,6 +378,7 @@ img {
     #infoButton {
         margin: 10px;
     }
+
 }
 
 @media(min-width: 1023px) {
@@ -359,5 +386,3 @@ img {
         display: block;
     }
 }
-
-     
