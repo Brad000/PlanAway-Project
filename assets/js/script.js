@@ -3,19 +3,20 @@ $(document).ready(function() {
  $("#button").click(function() {
   location.reload();
  });
- 
-  $("select").change(function(){
-        $(this).find("option:selected").each(function(){
-            var optionValue = $(this).attr("value");
-            if(optionValue){
-                $(".extra").not("." + optionValue).hide();
-                $("." + optionValue).show();
-            } else{
-                $(".extra").hide();
-            }
-        });
-    }).change();
- 
+
+ $("select").change(function() {
+  $(this).find("option:selected").each(function() {
+   var optionValue = $(this).attr("value");
+   if (optionValue) {
+    $(".extra").not("." + optionValue).hide();
+    $("." + optionValue).show();
+   }
+   else {
+    $(".extra").hide();
+   }
+  });
+ }).change();
+
 });
 
 
@@ -335,6 +336,7 @@ function nightlifeSearch() {
   }
  });
 }
+
 function clearMarkers() {
  for (var i = 0; i < markers.length; i++) {
   if (markers[i]) {
@@ -469,8 +471,3 @@ function buildIWContent(place) {
   document.getElementById('iw-website-row').style.display = 'none';
  }
 }
-
-
-
-
-
