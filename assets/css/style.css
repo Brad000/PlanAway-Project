@@ -103,6 +103,11 @@ img {
     text-align: center;
 }
 
+#info-card {
+    border: none;
+    background-color: #eae7dc;
+}
+
 #button {
     background-color: #e85a4f;
     color: #eae7dc;
@@ -342,7 +347,7 @@ img {
 /*---Footer---*/
 
 .footer {
-    height: 75px;
+    height: 85px;
     text-align: center;
     font-weight: 700;
     font-family: 'Gayathri', sans-serif;
