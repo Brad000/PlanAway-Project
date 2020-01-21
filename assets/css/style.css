@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Gayathri:100,200,300,400,500,600,700');
 
-/*---Landing Page---*/
+/*---Landing Page & Headings---*/
 
 .site-heading {
     background-color: #eae7dc;
@@ -31,7 +31,7 @@
     font-weight: 600;
 }
 
-#a-links {
+.a-links {
     text-decoration: none;
     cursor: pointer;
     color: #e98074;
@@ -41,7 +41,7 @@
     -o-transition: color 0.5s ease-in-out;
 }
 
-#a-links:hover {
+.a-links:hover {
     color: #e85a4f;
 }
 
@@ -65,9 +65,6 @@
 img {
     height: 85vh;
 }
-
-
-/*---planner.html---*/
 
 .briefs {
     font-family: 'Gayathri', sans-serif;
@@ -100,15 +97,10 @@ img {
     text-align: center;
 }
 
+/*---Planner.html (Form css)---*/
+
 .inline-buttons {
     text-align: center;
-}
-
-
-
-#info-card {
-    border: none;
-    background-color: #eae7dc;
 }
 
 #button {
@@ -161,6 +153,104 @@ img {
     background-color: #fd9b90;
 }
 
+.pac-card {
+    margin: 10px 10px 20px 10px;
+    border-radius: 2px 0 0 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #eae7dc;
+    font-family: 'Gayathri', sans-serif;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+.title {
+    color: #eae7dc;
+    background-color: #e85a4f;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+.filter-title {
+    margin-top: 10px;
+}
+
+.filterButtons {
+    margin: 10px 10px 10px 25px;
+}
+
+#findhotels {
+    margin: 5px 10px;
+}
+
+#listing {
+    position: absolute;
+    width: 220px;
+    height: 350px;
+    overflow: auto;
+    right: 2px;
+    top: 10px;
+    cursor: pointer;
+    overflow-x: hidden;
+    display: none;
+}
+
+#autocomplete {
+    width: 50%;
+    margin-bottom: 5px;
+}
+
+#country {
+    width: 48.5%;
+    margin-left: 9px;
+    margin-bottom: 5px;
+}
+
+#resultsTable {
+    border-collapse: collapse;
+    width: 240px;
+}
+
+.infoCard {
+    font-family: 'Gayathri', sans-serif;
+    font-weight: 600;
+    background-color: #e85a4f !important;
+    color: #eae7dc;
+    border: solid 2px grey !important;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #eae7dc;
+}
+
+.flag {
+    height: 50px;
+    width: 70px;
+}
+
+.us-flag {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+.extra {
+    display: none;
+}
+
+.usa {
+    display: none;
+}
+
+/*---Sponser Modal---*/
+
 #pop-up {
     background-color: #e85a4f;
     height: auto;
@@ -205,56 +295,6 @@ img {
 
 }
 
-.pac-card {
-    margin: 10px 10px 20px 10px;
-    border-radius: 2px 0 0 2px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    background-color: #eae7dc;
-    font-family: 'Gayathri', sans-serif;
-}
-
-#pac-container {
-    padding-bottom: 12px;
-    margin-right: 12px;
-}
-
-#title {
-    color: #eae7dc;
-    background-color: #e85a4f;
-    font-size: 25px;
-    font-weight: 500;
-    padding: 6px 12px;
-}
-
-.filter-title {
-    margin-top: 10px;
-}
-
-#filterButtons {
-    margin: 10px 10px 10px 25px;
-}
-
-#findhotels {
-    margin: 5px 10px;
-}
-
-#listing {
-    position: absolute;
-    width: 220px;
-    height: 400px;
-    overflow: auto;
-    right: 2px;
-    top: 10px;
-    cursor: pointer;
-    overflow-x: hidden;
-    display: none;
-
-
-}
-
 #locationField {
     -webkit-box-flex: 1 1 190px;
     -ms-flex: 1 1 190px;
@@ -268,18 +308,11 @@ img {
     -webkit-box-flex: 1 1 140px;
     -ms-flex: 1 1 140px;
     flex: 1 1 140px;
-
 }
 
-#autocomplete {
-    width: 50%;
-    margin-bottom: 5px;
-}
-
-#country {
-    width: 48.5%;
-    margin-left: 9px;
-    margin-bottom: 5px;
+#rating {
+    font-size: 13px;
+    font-family: 'Gayathri', sans-serif Unicode MS;
 }
 
 .placeIcon {
@@ -291,16 +324,6 @@ img {
 .hotelIcon {
     width: 24px;
     height: 24px;
-}
-
-#resultsTable {
-    border-collapse: collapse;
-    width: 240px;
-}
-
-#rating {
-    font-size: 13px;
-    font-family: 'Gayathri', sans-serif Unicode MS;
 }
 
 .iw_table_row {
@@ -331,40 +354,6 @@ img {
 .fa-google {
     margin-left: 5px;
 }
-
-#infoCard {
-    font-family: 'Gayathri', sans-serif;
-    font-weight: 600;
-    background-color: #e85a4f;
-    color: #eae7dc;
-    border: solid 2px grey;
-
-}
-
-.card-link {
-    text-decoration: none;
-    color: #eae7dc;
-}
-
-.flag {
-    height: 50px;
-    width: 70px;
-}
-
-.us-flag {
-    height: 50px;
-    width: 50px;
-    margin-left: 10px;
-}
-
-.extra {
-    display: none;
-}
-
-.usa {
-    display: none;
-}
-
 
 /*---Media Queries---*/
 

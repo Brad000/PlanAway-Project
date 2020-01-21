@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5655c570e1.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <title>PlanAway - Plan your next vacation</title>
 </head>
@@ -33,7 +33,7 @@
                         <p class="briefs">How to plan your trip with PlanAway.</p>
                         <p class="briefs">Use the country selector to choose from one of the 20 most visited countries in the world. Type in any city within your chosen country to view it on the map.</p>
                         <p class="briefs">Select 1 of 4 filter searches to show related results on the map.</p>
-                        <p class="briefs">Use the country info button to bring up additional information relating to your selcted country.</p>
+                        <p class="briefs">Use the country info button to bring up additional information relating to your selcted country. Click one of the 3 attractions to visit the sponsored site page.</p>
                         <p class="briefs">All sponser site for futher research are easily accessable using the sponser button.</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
             <div class="col-12 col-md-6">
                 <div class="pac-card" id="pac-card">
                     <div>
-                        <div id="title">
+                        <div class="title">
                             Search Your Next Hoilday Destination
                         </div>
                     </div>
@@ -55,7 +55,6 @@
                         <div id="findhotels">
                             Start Planning Below:
                         </div>
-
                         <div id="controls">
                             <select id="country">
                                   <option value="all" selected>Choose A Country</option>
@@ -80,40 +79,38 @@
                                   <option value="kr">South Korea</option>
                                   <option value="nl">Netherlands</option>
                             </select>
-
                             <div id="locationField">
                                 <input id="autocomplete" placeholder="Enter a city" type="text" />
                             </div>
                         </div>
                     </div>
-                    <div id="title">
+                    <div class="title">
                         <h4 class="filter-title">Filter Results</h4>
                     </div>
-                    <div class="form-check" id="filterButtons">
+                    <div class="form-check filterButtons">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hotelCheck" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Hotels</label>
+                        <label class="form-check-label" for="hotelCheck">Hotels</label>
                     </div>
-                    <div class="form-check" id="filterButtons">
+                    <div class="form-check filterButtons">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="attractionCheck" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Attractions</label>
+                        <label class="form-check-label" for="attractionCheck">Attractions</label>
                     </div>
-                    <div class="form-check" id="filterButtons">
+                    <div class="form-check filterButtons">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="restaurantCheck" value="option3">
-                        <label class="form-check-label" for="inlineRadio3">Restaurants</label>
+                        <label class="form-check-label" for=restaurantCheck>Restaurants</label>
                     </div>
-                    <div class="form-check" id="filterButtons">
+                    <div class="form-check filterButtons">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="nightlifeCheck" value="option3">
-                        <label class="form-check-label" for="inlineRadio3">Nightlife</label>
+                        <label class="form-check-label" for="nightlifeCheck">Nightlife</label>
                     </div>
                     <div>
-                        <a type="button" class="btn" id="button">Clear Results</a>
+                        <button type="button" class="btn" id="button">Clear Results</button>
                     </div>
                     <div id="listing">
                         <table id="resultsTable">
                             <tbody id="results"></tbody>
                         </table>
                     </div>
-
                     <div style="display: none">
                         <div id="info-content">
                             <table>
@@ -138,15 +135,13 @@
                                     <td id="iw-website"></td>
                                 </tr>
                             </table>
-
                         </div>
                     </div>
                     <div class="inline-buttons">
-                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#countryInfo" aria-expanded="false" aria-controls="collapseExample" id="countryButton">Country Info
-                </button>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#countryInfo" aria-expanded="false" aria-controls="countryButton" id="countryButton">Country Info</button>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl" id="sponserButton">Sponser Sites</button>
                     </div>
-                    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="pop-up" aria-hidden="true">
                         <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content" id="pop-up">
                                 <h5 class="sponser-titles">Reference Sites</h5>
@@ -160,10 +155,10 @@
                             </div>
                         </div>
                     </div>
-                    <!---No Selection Card--->
+                    <!---No Selection Card-->
                     <div class="collapse" id="countryInfo">
                         <div class="all extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -173,9 +168,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!---French Card--->
+                        <!---French Card-->
                         <div class="fr extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -194,17 +189,17 @@
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
                                                 <li><a class="card-link" href="https://www.lonelyplanet.com/france/paris/attractions/musee-du-louvre/a/poi-sig/372123/359219" target="_Blank">Musée du Louvre</a></li>
-                                                <li><a class="card-link" href="https://www.lonelyplanet.com/france/chartres/attractions/cathedrale-notre-dame/a/poi-sig/1079880/359219">Cathédrale Notre Dame</a></li>
-                                                <li><a class="card-link" href="https://www.lonelyplanet.com/france/attractions/chateau-de-chenonceau/a/poi-sig/1196827/359219" target "_blank">Château de Chenonceau</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/france/chartres/attractions/cathedrale-notre-dame/a/poi-sig/1079880/359219" target="_blank">Cathédrale Notre Dame</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/france/attractions/chateau-de-chenonceau/a/poi-sig/1196827/359219" target="_blank">Château de Chenonceau</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---USA Card--->
+                        <!---USA Card-->
                         <div class="us extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -222,18 +217,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/usa/attractions/kennedy-space-center/a/poi-sig/1348335/361720 target="_Blank">Kennedy Space Center</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/usa/tucson/attractions/saguaro-national-park/a/poi-sig/1108863/361720>Saguaro National Park</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/usa/new-york-city/attractions/central-park/a/poi-sig/381791/361720 target "_blank">Central Park</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/usa/attractions/kennedy-space-center/a/poi-sig/1348335/361720" target="_Blank">Kennedy Space Center</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/usa/tucson/attractions/saguaro-national-park/a/poi-sig/1108863/361720" target="_blank">Saguaro National Park</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/usa/new-york-city/attractions/central-park/a/poi-sig/381791/361720" target="_blank">Central Park</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Spain Card--->
+                        <!---Spain Card-->
                         <div class="es extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -251,18 +246,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/spain/granada/attractions/alhambra/a/poi-sig/430192/360727 target="_Blank">Alhambra</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/spain/seville/attractions/real-alcazar/a/poi-sig/411802/360727>Real Alcázar</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/spain/barcelona/attractions/la-sagrada-familia/a/poi-sig/374867/360727 target "_blank">La Sagrada Família</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/spain/granada/attractions/alhambra/a/poi-sig/430192/360727" target="_Blank">Alhambra</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/spain/seville/attractions/real-alcazar/a/poi-sig/411802/360727" target="_Blank">Real Alcázar</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/spain/barcelona/attractions/la-sagrada-familia/a/poi-sig/374867/360727" target="_blank">La Sagrada Família</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---China Card--->
+                        <!---China Card-->
                         <div class="cn extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -280,18 +275,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/china/beijing/attractions/forbidden-city/a/poi-sig/368617/355904 target="_Blank">Forbidden City</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/china/dunhuang/attractions/mogao-grottoes/a/poi-sig/1496278/355904>Mogao Grottoes</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/china/beijing/attractions/temple-of-heaven-park/a/poi-sig/1106060/355904 target "_blank">Temple of Heaven Park</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/china/beijing/attractions/forbidden-city/a/poi-sig/368617/355904" target="_Blank">Forbidden City</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/china/dunhuang/attractions/mogao-grottoes/a/poi-sig/1496278/355904" target="_Blank">Mogao Grottoes</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/china/beijing/attractions/temple-of-heaven-park/a/poi-sig/1106060/355904" target="_blank">Temple of Heaven Park</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Italy Card--->
+                        <!---Italy Card-->
                         <div class="it extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -309,18 +304,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/italy/florence/attractions/galleria-degli-uffizi/a/poi-sig/1157282/359845 target="_Blank">Galleria degli Uffizi</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/italy/rome/attractions/vatican-museums/a/poi-sig/1256585/359845>Vatican Museums</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/italy/rome/attractions/roman-forum/a/poi-sig/389047/359845 target "_blank">Roman Forum</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/italy/florence/attractions/galleria-degli-uffizi/a/poi-sig/1157282/359845" target="_Blank">Galleria degli Uffizi</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/italy/rome/attractions/vatican-museums/a/poi-sig/1256585/359845" target="_Blank">Vatican Museums</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/italy/rome/attractions/roman-forum/a/poi-sig/389047/359845" target="_blank">Roman Forum</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---UK Card--->
+                        <!---UK Card-->
                         <div class="uk extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -338,18 +333,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/england/london/attractions/westminster-abbey/a/poi-sig/370357/358869 target="_Blank">Westminster Abbey</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/england/windsor-eton/attractions/windsor-castle/a/poi-sig/474840/358869>Windsor Castle</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/england/attractions/stonehenge/a/poi-sig/1218471/358869 target "_blank">Stonehenge</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/england/london/attractions/westminster-abbey/a/poi-sig/370357/358869" target="_Blank">Westminster Abbey</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/england/windsor-eton/attractions/windsor-castle/a/poi-sig/474840/358869" target="_Blank">Windsor Castle</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/england/attractions/stonehenge/a/poi-sig/1218471/358869" target="_blank">Stonehenge</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Germany Card--->
+                        <!---Germany Card-->
                         <div class="de extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -367,18 +362,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/germany/berlin/attractions/pergamonmuseum/a/poi-sig/1118820/359343 target="_Blank">Pergamonmuseum</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/germany/cologne/attractions/kolner-dom/a/poi-sig/456311/359343>Kölner Dom</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/germany/weimar/attractions/gedenkstatte-buchenwald/a/poi-sig/1210250/359343 target "_blank">Gedenkstätte Buchenwald</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/germany/berlin/attractions/pergamonmuseum/a/poi-sig/1118820/359343" target="_Blank">Pergamonmuseum</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/germany/cologne/attractions/kolner-dom/a/poi-sig/456311/359343" target="_Blank">Kölner Dom</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/germany/weimar/attractions/gedenkstatte-buchenwald/a/poi-sig/1210250/359343" target="_blank">Gedenkstätte Buchenwald</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Mexico Card--->
+                        <!---Mexico Card-->
                         <div class="mx extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -396,18 +391,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/mexico/attractions/yaxchilan/a/poi-sig/1079381/361468 target="_Blank">Yaxchilán</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/germany/cologne/attractions/kolner-dom/a/poi-sig/456311/359343>Edzná</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/mexico/palenque/attractions/templo-de-las-inscripciones-group/a/poi-sig/497032/361468 target "_blank">Templo de las Inscripciones</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/mexico/attractions/yaxchilan/a/poi-sig/1079381/361468" target="_Blank">Yaxchilán</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/germany/cologne/attractions/kolner-dom/a/poi-sig/456311/359343" target="_Blank">Edzná</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/mexico/palenque/attractions/templo-de-las-inscripciones-group/a/poi-sig/497032/361468" target="_blank">Templo de las Inscripciones</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Thailand Card--->
+                        <!---Thailand Card-->
                         <div class="th extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -425,18 +420,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/thailand/bangkok/attractions/wat-pho/a/poi-sig/1148214/357592 target="_Blank">Wat Pho</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/thailand/bangkok/attractions/jim-thompson-house/a/poi-sig/407290/357592>Jim Thompson House</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/thailand/nan/attractions/wat-phumin/a/poi-sig/1243793/357592 target "_blank">Wat Phumin</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/thailand/bangkok/attractions/wat-pho/a/poi-sig/1148214/357592" target="_Blank">Wat Pho</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/thailand/bangkok/attractions/jim-thompson-house/a/poi-sig/407290/357592" target="_Blank">Jim Thompson House</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/thailand/nan/attractions/wat-phumin/a/poi-sig/1243793/357592" target="_blank">Wat Phumin</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Turkey Card--->
+                        <!---Turkey Card-->
                         <div class="tr extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -454,18 +449,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/turkey/istanbul/attractions/topkapi-palace/a/poi-sig/402212/360857 target="_Blank">Topkapı Palace</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/turkey/istanbul/attractions/suleymaniye-mosque/a/poi-sig/401910/360857>Süleymaniye Mosque</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/turkey/istanbul/attractions/aya-sofya/a/poi-sig/401908/360857 target "_blank">Aya Sofya</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/turkey/istanbul/attractions/topkapi-palace/a/poi-sig/402212/360857" target="_Blank">Topkapı Palace</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/turkey/istanbul/attractions/suleymaniye-mosque/a/poi-sig/401910/360857" target="_Blank">Süleymaniye Mosque</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/turkey/istanbul/attractions/aya-sofya/a/poi-sig/401908/360857" target="_blank">Aya Sofya</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Austria Card--->
+                        <!---Austria Card-->
                         <div class="at extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -483,18 +478,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/austria/innsbruck/attractions/schloss-ambras/a/poi-sig/1081831/358584 target="_Blank">Schloss Ambras</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/austria/vienna/attractions/staatsoper/a/poi-sig/1414700/358584>Staatsoper</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/austria/salzburg/attractions/schloss-hellbrunn/a/poi-sig/1008420/358584 target "_blank">Schloss Hellbrunn</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/austria/innsbruck/attractions/schloss-ambras/a/poi-sig/1081831/358584" target="_Blank">Schloss Ambras</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/austria/vienna/attractions/staatsoper/a/poi-sig/1414700/358584" target="_Blank">Staatsoper</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/austria/salzburg/attractions/schloss-hellbrunn/a/poi-sig/1008420/358584" target="_blank">Schloss Hellbrunn</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Malaysia Card--->
+                        <!---Malaysia Card-->
                         <div class="my extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -512,18 +507,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/malaysia/attractions/sepilok-orangutan-rehabilitation-centre/a/poi-sig/1058979/356948 target="_Blank">Sepilok Orangutan Rehabilitation Centre</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/malaysia/george-town/attractions/blue-mansion/a/poi-sig/1217750/356948>Blue Mansion</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/malaysia/teluk-bahang/attractions/penang-national-park/a/poi-sig/1218854/356948 target "_blank">Penang National Park</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/malaysia/attractions/sepilok-orangutan-rehabilitation-centre/a/poi-sig/1058979/356948" target="_Blank">Sepilok Orangutan Rehabilitation Centre</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/malaysia/george-town/attractions/blue-mansion/a/poi-sig/1217750/356948" target="_Blank">Blue Mansion</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/malaysia/teluk-bahang/attractions/penang-national-park/a/poi-sig/1218854/356948" target="_blank">Penang National Park</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Greece Card--->
+                        <!---Greece Card-->
                         <div class="gr extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -541,18 +536,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/greece/olympia/attractions/ancient-olympia/a/poi-sig/476118/359417 target="_Blank">Ancient Olympia</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/greece/attractions/ancient-mycenae/a/poi-sig/1276854/359417>Ancient Mycenae</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/greece/attractions/palace-of-knossos/a/poi-sig/504778/359417 target "_blank">Palace of Knossos</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/greece/olympia/attractions/ancient-olympia/a/poi-sig/476118/359417" target="_Blank">Ancient Olympia</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/greece/attractions/ancient-mycenae/a/poi-sig/1276854/359417" target="_Blank">Ancient Mycenae</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/greece/attractions/palace-of-knossos/a/poi-sig/504778/359417" target="_blank">Palace of Knossos</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Russia Card--->
+                        <!---Russia Card-->
                         <div class="ru extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -570,18 +565,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/russia/attractions/solovetsky-transfiguration-monastery/a/poi-sig/1475605/360415 target="_Blank">Solovetsky Transfiguration Monastery</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/russia/moscow/attractions/armoury/a/poi-sig/1473319/360415>Armoury</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/russia/moscow/attractions/pushkin-museum-of-fine-arts/a/poi-sig/373443/3604157 target "_blank">Pushkin Museum of Fine Arts</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/russia/attractions/solovetsky-transfiguration-monastery/a/poi-sig/1475605/360415" target="_Blank">Solovetsky Transfiguration Monastery</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/russia/moscow/attractions/armoury/a/poi-sig/1473319/360415" target="_Blank">Armoury</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/russia/moscow/attractions/pushkin-museum-of-fine-arts/a/poi-sig/373443/3604157" target="_blank">Pushkin Museum of Fine Arts</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Japan Card--->
+                        <!---Japan Card-->
                         <div class="jp extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -599,18 +594,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/japan/nikko/attractions/tosho-gu/a/poi-sig/1237255/356635 target="_Blank">Tōshō-gū</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/japan/attractions/oku-no-in/a/poi-sig/486204/356635>Oku-no-iny</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/japan/tokyo/attractions/senso-ji/a/poi-sig/396343/356635 target "_blank">Sensō-ji</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/japan/nikko/attractions/tosho-gu/a/poi-sig/1237255/356635" target="_Blank">Tōshō-gū</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/japan/attractions/oku-no-in/a/poi-sig/486204/356635" target="_Blank">Oku-no-iny</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/japan/tokyo/attractions/senso-ji/a/poi-sig/396343/356635" target="_blank">Sensō-ji</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Canada Card--->
+                        <!---Canada Card-->
                         <div class="ca extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -628,19 +623,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/canada/attractions/nahanni-national-park-reserve/a/poi-sig/1630200/361212 target="_Blank">Nahanni National Park Reserve</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/canada/louisbourg/attractions/fortress-of-louisbourg-national-historic-site/a/poi-sig/1362964/361212>Fortress of Louisbourg</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/canada/attractions/gwaii-haanas-national-park-reserve-national-marine-conservation-area-reserve-haida-heritage-site/a/poi-sig/1365885/361212 target
-                                                        "_blank">Gwaii Haanas National Park</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/canada/attractions/nahanni-national-park-reserve/a/poi-sig/1630200/361212" target="_Blank">Nahanni National Park Reserve</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/canada/louisbourg/attractions/fortress-of-louisbourg-national-historic-site/a/poi-sig/1362964/361212" target="_Blank">Fortress of Louisbourg</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/canada/attractions/gwaii-haanas-national-park-reserve-national-marine-conservation-area-reserve-haida-heritage-site/a/poi-sig/1365885/361212" target="_blank">Gwaii Haanas National Park</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Saudi Arabia Card--->
+                        <!---Saudi Arabia Card-->
                         <div class="sa extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -658,18 +652,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/saudi-arabia/medina/attractions/prophet-s-mosque/a/poi-sig/1602776/361126 target="_Blank">Prophet’s Mosque</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/saudi-arabia/mecca/attractions/al-masjid-al-haram/a/poi-sig/1531496/361126>Al Masjid Al Haram</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/saudi-arabia/attractions/jubbah-rock-carvings/a/poi-sig/1615621/361126 target "_blank">Jubbah Rock Carvings</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/saudi-arabia/medina/attractions/prophet-s-mosque/a/poi-sig/1602776/361126" target="_Blank">Prophet’s Mosque</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/saudi-arabia/mecca/attractions/al-masjid-al-haram/a/poi-sig/1531496/361126" target="_Blank">Al Masjid Al Haram</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/saudi-arabia/attractions/jubbah-rock-carvings/a/poi-sig/1615621/361126" target="_blank">Jubbah Rock Carvings</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Poland Card--->
+                        <!---Poland Card-->
                         <div class="pl extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -687,22 +681,22 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/poland/malbork/attractions/malbork-castle/a/poi-sig/1278435/360265 target="_Blank">Malbork Castle</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/poland/krakow/attractions/wieliczka-salt-mine/a/poi-sig/1277048/360265>Wieliczka Salt Mine</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/poland/gdansk/attractions/museum-of-wwii/a/poi-sig/1608093/360265 target "_blank">Museum of WWII</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/poland/malbork/attractions/malbork-castle/a/poi-sig/1278435/360265" target="_Blank">Malbork Castle</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/poland/krakow/attractions/wieliczka-salt-mine/a/poi-sig/1277048/360265" target="_Blank">Wieliczka Salt Mine</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/poland/gdansk/attractions/museum-of-wwii/a/poi-sig/1608093/360265" target="_blank">Museum of WWII</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---South Korea Card--->
+                        <!---South Korea Card-->
                         <div class="kr extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
-                                            <h4 class="card-title">Poland<img class="us-flag" src="assets/images/skoreaf.png" alt="South Korea Flag"></h4>
+                                            <h4 class="card-title">South Korea<img class="us-flag" src="assets/images/skoreaf.png" alt="South Korea Flag"></h4>
                                             <ul>
                                                 <li>Capital: Seoul</li>
                                                 <li>Population: 51,709,098 (2019)</li>
@@ -716,18 +710,18 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/south-korea/seoul/attractions/gyeongbokgung/a/poi-sig/391977/357351 target="_Blank">Gyeongbokgung</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/south-korea/seoul/attractions/changdeokgung/a/poi-sig/391915/357351>Changdeokgung</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/south-korea/jeonju/attractions/jeonju-hanok-maeul/a/poi-sig/1427182/357351 target "_blank">Jeonju Hanok Maeul</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/south-korea/seoul/attractions/gyeongbokgung/a/poi-sig/391977/357351" target="_Blank">Gyeongbokgung</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/south-korea/seoul/attractions/changdeokgung/a/poi-sig/391915/357351" target="_Blank">Changdeokgung</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/south-korea/jeonju/attractions/jeonju-hanok-maeul/a/poi-sig/1427182/357351" target="_blank">Jeonju Hanok Maeul</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---Netherlands Card--->
+                        <!---Netherlands Card-->
                         <div class="nl extra">
-                            <div class="card" id="infoCard">
+                            <div class="card infoCard">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="card-body">
@@ -745,9 +739,9 @@
                                             </ol>
                                             <h5>Top 3 Attractions</h5>
                                             <ol>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/the-netherlands/rotterdam/attractions/van-nelle-fabriek/a/poi-sig/1526004/360838 target="_Blank">Van Nelle Fabriek</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/the-netherlands/den-haag/attractions/mauritshuis/a/poi-sig/1020023/360838>Mauritshuis</a></li>
-                                                <li><a class="card-link" href=https://www.lonelyplanet.com/the-netherlands/amsterdam/attractions/rijksmuseum/a/poi-sig/387159/360838 target "_blank">Rijksmuseum</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/the-netherlands/rotterdam/attractions/van-nelle-fabriek/a/poi-sig/1526004/360838" target="_Blank">Van Nelle Fabriek</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/the-netherlands/den-haag/attractions/mauritshuis/a/poi-sig/1020023/360838" target="_Blank">Mauritshuis</a></li>
+                                                <li><a class="card-link" href="https://www.lonelyplanet.com/the-netherlands/amsterdam/attractions/rijksmuseum/a/poi-sig/387159/360838" target="_blank">Rijksmuseum</a></li>
                                             </ol>
                                         </div>
                                     </div>
@@ -766,7 +760,7 @@
     <footer class="container-fluid">
         <div class="row">
             <div class="col-12 footer">
-                <h4>Powered By:<a href="https://www.google.com/" id="a-links" target="_blank"><i class="fab fa-google"></i></a></h4>
+                <h4>Powered By:<a href="https://www.google.com/" class="a-links" target="_blank"><i class="fab fa-google"></i></a></h4>
             </div>
         </div>
     </footer>
