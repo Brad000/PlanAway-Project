@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-// Click function to reload the page 
+ // Click function to reload the page 
 
  $("#button").click(function() {
   location.reload();
  });
 
-// Function to select info card based on country selected 
+ // Function to select info card based on country selected 
 
  $("select").change(function() {
   $(this).find("option:selected").each(function() {
@@ -136,7 +136,7 @@ function initMap() {
  });
 
  // Autocomplete object, with event listeners 
- 
+
  autocomplete = new google.maps.places.Autocomplete(
   /** @type {!HTMLInputElement} */
   (
@@ -233,9 +233,9 @@ function hotelSearch() {
      animation: google.maps.Animation.DROP,
      icon: markerIcon
     });
-    
+
     // Information card if marker is clicked 
-    
+
     markers[i].placeResult = results[i];
     google.maps.event.addListener(markers[i], 'click', showInfoWindow);
     setTimeout(dropMarker(i), i * 100);
@@ -426,7 +426,7 @@ function buildIWContent(place) {
  }
 
  // Assign a five-star rating to the hotel.
- 
+
  if (place.rating) {
   var ratingHtml = '';
   for (var i = 0; i < 5; i++) {
@@ -446,7 +446,7 @@ function buildIWContent(place) {
 
  // The regexp isolates the first part of the URL (domain plus subdomain)
  // to give a short URL for displaying in the info window.
- 
+
  if (place.website) {
   var fullUrl = place.website;
   var website = hostnameRegexp.exec(place.website);
